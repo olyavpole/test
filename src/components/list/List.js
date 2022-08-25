@@ -14,13 +14,13 @@ const List = ({title, cards, listID}) => {
 
     const dispatch = useDispatch();
 
-    const movingCard = useCallback((dragIndex, hoverIndex, listID) => {
+    const sortingCard = useCallback((dragIndex, hoverIndex, listID) => {
         dispatch(sortCard(dragIndex, hoverIndex, listID));
     },[])
 
     const data = cards.map((card, i) => {
         return (
-            <Card text={card.text} id={card.id} index={i} key={card.id} listID={listID} movingCard={movingCard}/>
+            <Card text={card.text} id={card.id} index={i} key={card.id} listID={listID} sortingCard={sortingCard}/>
         )
     })
 
