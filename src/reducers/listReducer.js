@@ -79,7 +79,6 @@ const listReducer = (state = initialState, action) => {
         case 'MOVE_CARD':
             const currentList = state.filter(list => list.id === action.payload.currentListID)[0];
             const cardToMove = currentList.cards.filter(card => card.id === action.payload.cardId)[0];
-            
             const targetList = state.filter(list => list.id === action.payload.targetListID)[0];
             const modifiedCurrentList = (action.payload.currentListID === action.payload.targetListID) ? currentList : 
                 {

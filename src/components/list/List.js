@@ -20,7 +20,7 @@ const List = ({title, cards, listID}) => {
 
     const data = cards.map((card, i) => {
         return (
-            <Card text={card.text} id={card.id} index={i} key={card.id} listID={listID} formOpen={card.form} movingCard={movingCard} description={card.description}/>
+            <Card text={card.text} id={card.id} index={i} key={card.id} listID={listID} movingCard={movingCard}/>
         )
     })
 

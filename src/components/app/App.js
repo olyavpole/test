@@ -21,7 +21,7 @@ const App = () => {
   const data = lists.map((list, i) => {
     return (
       <DraggableList index={i} listID={list.id} key={list.id} sortingList={sortingList}>
-        <List title={list.title} cards={list.cards} index={i} listID={list.id} key={list.id} formOpen={list.form}/>
+        <List title={list.title} cards={list.cards} index={i} listID={list.id} key={list.id}/>
       </DraggableList>
     )
   })

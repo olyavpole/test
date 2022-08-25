@@ -24,20 +24,15 @@ const DraggableList = (props) => {
 
             const dragIndex = item.index;
             const hoverIndex = index;
-            
             if (dragIndex === hoverIndex) {
                 return
             }
             
-            const hoverBoundingRect = ref.current?.getBoundingClientRect()
-            
+            const hoverBoundingRect = ref.current?.getBoundingClientRect();
             const hoverMiddleX =
-                (hoverBoundingRect.right - hoverBoundingRect.left) / 2
-            
-            const clientOffset = monitor.getClientOffset()
-            
-            const hoverClientX = clientOffset.x - hoverBoundingRect.left
-            
+                (hoverBoundingRect.right - hoverBoundingRect.left) / 2;
+            const clientOffset = monitor.getClientOffset();
+            const hoverClientX = clientOffset.x - hoverBoundingRect.left;
             if (dragIndex < hoverIndex && hoverClientX < hoverMiddleX) {
                 return
             }

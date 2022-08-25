@@ -82,10 +82,6 @@ const Card = ({text, id, listID, index, movingCard}) => {
                         className='card__cross'
                         onClick={() => onDeleteCard(id, listID)}
                         >╳</span>
-                    <span 
-                        className='card__rename'
-                        >
-                    </span>
                 </div>
             </div>
         </>
