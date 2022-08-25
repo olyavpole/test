@@ -1,0 +1,60 @@
+.button {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 45px;
+    padding-left: 30px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #e1d1d1; 
+        color: #fff;
+        transition: all .3s;
+
+        &::before, &::after {
+            background-color: #fff;
+        }
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: #713D3D;
+    }
+
+    &::after {
+        width: 1px;
+        height: 17px;
+        left: 44px;
+        top: 15px;
+    }
+
+    &::before {
+        height: 1px;
+        width: 17px;
+        left: 36px;
+        top: 23px;
+    }
+
+    &--card {
+        margin: 0 auto;
+        width: 206px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    &--list {
+        border-radius: 15px;
+        padding-left: 0;
+
+        &::after {
+            left: 59px;
+        }
+    
+        &::before {
+            left: 51px;
+        }
+    }
+}
