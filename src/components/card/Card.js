@@ -7,7 +7,7 @@ import { deleteCard } from '../../actions/cardActions';
 
 import './card.scss'
 
-const Card = ({text, id, listID, index, movingCard}) => {
+const Card = ({text, id, listID, index, sortingCard}) => {
 
     const ref = useRef(null)
     const [{ handlerId }, drop] = useDrop({
@@ -37,7 +37,7 @@ const Card = ({text, id, listID, index, movingCard}) => {
             if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
                 return;
             }
-            movingCard(dragIndex, hoverIndex, listID);
+            sortingCard(dragIndex, hoverIndex, listID);
             item.index = hoverIndex;
         },
     })
